@@ -1,0 +1,47 @@
+@import '../../styles/index.scss';
+
+.button {
+  @include font(16px, 700, 24px);
+  display: block;
+  box-sizing: border-box;
+  font-family: $font-family;
+  padding: 12px 24px;
+  border: 1px solid $orange-color;
+  border-radius: 40px;
+  background-color: $light-color;
+  color: $orange-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $orange-color;
+    color: $light-color;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.orange {
+  background-color: $orange-color;
+  color: $light-color;
+  border-color: transparent;
+
+  &:hover {
+    background-color: $black-color;
+    color: $light-color;
+  }
+}
+
+.grey {
+  background-color: #f3f3f4;
+  color: $black-color;
+  border-color: transparent;
+
+  &:hover {
+    background-color: $black-color;
+    color: $light-color;
+  }
+}
