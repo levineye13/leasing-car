@@ -1,0 +1,28 @@
+@font-face {
+  font: {
+    family: 'Nekst';
+    weight: 900;
+    style: normal;
+  }
+  src: local('Nekst-Black'), url('./Nekst-Black.otf') format('opentype');
+}
+
+@font-face {
+  font: {
+    family: 'Gilroy';
+    weight: 400;
+    style: normal;
+  }
+  src: local('Gilroy-Regular'), url('./Gilroy-Regular.woff2') format('woff2'),
+    url('./Gilroy-Regular.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: 'Gilroy';
+    weight: 700;
+    style: normal;
+  }
+  src: local('Gilroy-Bold'), url('./Gilroy-Bold.woff2') format('woff2'),
+    url('./Gilroy-Bold.woff') format('woff');
+}
