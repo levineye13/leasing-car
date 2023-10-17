@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.background {
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: $black-color, $alpha: 0.5);
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: pointer;
+
+  &_open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
