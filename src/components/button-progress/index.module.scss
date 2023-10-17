@@ -1,0 +1,82 @@
+@import '../../styles/variables';
+
+.button {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    left: calc(50% - 6px);
+    top: calc(50% - 1px);
+    background-color: $light-color;
+    transform-origin: right;
+  }
+
+  &:hover {
+    .svg {
+      background-color: rgba($color: $light-color, $alpha: 0.2);
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &_left {
+    &::before,
+    &::after {
+      transform-origin: left;
+      background-color: rgba($color: $light-color, $alpha: 0.4);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .track,
+  .indicator {
+    cx: 26px;
+    cy: 26px;
+    r: 24px;
+    stroke-width: 2px;
+    fill: transparent;
+  }
+
+  .track {
+    stroke: rgba($color: $light-color, $alpha: 0.4);
+  }
+
+  .indicator {
+    stroke: $light-color;
+    stroke-dasharray: 150.7px;
+    stroke-linecap: round;
+  }
+}
