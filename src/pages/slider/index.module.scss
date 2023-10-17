@@ -1,0 +1,57 @@
+.section {
+  box-sizing: border-box;
+  min-height: 473px;
+  padding: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: no-repeat right/62% auto url('../../images/car.png'), #000;
+  border-radius: 32px;
+  position: relative;
+
+  @media screen and (max-width: 1023px) {
+    padding: 70px 44px;
+    background-position: center -64px;
+    background-size: 72%;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 86px 20px;
+    background-size: 462px;
+    border-radius: 0 0 32px 32px;
+  }
+
+  @media screen and (max-width: 479px) {
+    background-position: -125px -50px;
+  }
+
+  .description {
+    @media screen and (max-width: 1023px) {
+      align-self: flex-end;
+    }
+  }
+
+  .points {
+    position: absolute;
+    left: 50%;
+    bottom: 44px;
+    transform: translateX(-50%);
+
+    @media screen and (max-width: 1023px) {
+      bottom: 24px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    bottom: 44px;
+    right: 44px;
+  }
+
+  .progress {
+    margin-left: 16px;
+  }
+}
