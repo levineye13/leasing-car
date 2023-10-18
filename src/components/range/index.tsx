@@ -10,6 +10,7 @@ interface IRange {
   readonly name: string;
   readonly min: string | number;
   readonly max: string | number;
+  readonly disabled?: boolean;
   readonly icon: TRange;
   readonly onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   readonly onBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
@@ -22,15 +23,16 @@ const Range: FC<IRange> = ({
   name,
   min,
   max,
+  disabled,
   icon,
   onChange,
   onBlur,
   percentSum,
 }): ReactElement => {
-  const sum = Math.round((Number(value) * Number(percentSum)) / 100);
+  const sum = Math.floor((Number(value) * Number(percentSum)) / 100);
 
   return (
-    <div className={styles.div}>
+    <div className={`${styles.div} ${disabled ? styles.div_disabled : ''}`}>
       <p className={styles.title}>{title}</p>
       <label className={styles.label}>
         <input
@@ -40,6 +42,7 @@ const Range: FC<IRange> = ({
           onChange={onChange}
           onBlur={onBlur}
           name={name}
+          disabled={disabled}
         />
         {icon === 'sum' ? (
           <img src={images.sum} alt="Стоимость" title="Стоимость" />
@@ -57,6 +60,7 @@ const Range: FC<IRange> = ({
         max={max}
         value={value || 0}
         onChange={onChange}
+        disabled={disabled}
       />
     </div>
   );

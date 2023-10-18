@@ -104,6 +104,7 @@ const Calculator: FC = (): ReactElement => {
           min={input.month.min}
           max={input.month.max}
           icon="month"
+          disabled
         />
       </div>
       <div className={styles.div}>
