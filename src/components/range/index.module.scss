@@ -1,0 +1,75 @@
+@import '../../styles/index.scss';
+
+.div {
+  display: flex;
+  flex-direction: column;
+  max-width: 427px;
+  width: 100%;
+
+  .title {
+    font-family: $font-family;
+    @include font(16px, 400, 125%);
+    color: $grey-color;
+    margin: 0 0 24px 0;
+  }
+
+  .label {
+    box-sizing: border-box;
+    font-family: 'Nekst', 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3f3f4;
+    border-radius: 16px;
+  }
+
+  .input {
+    @include font(30px, 900, 120%);
+    box-sizing: border-box;
+    font-family: inherit;
+    color: $grey-color;
+    width: 100%;
+    border: 0;
+    padding: 0 20px 0 0;
+    background-color: inherit;
+    outline: 0;
+  }
+
+  .percent {
+    @include font(20px, 900, 120%);
+    display: block;
+    padding: 15px 17px;
+    background-color: #ebebec;
+    border-radius: 16px;
+    color: $grey-color;
+  }
+
+  .month {
+    @include font(30px, 900, 120%);
+    color: $grey-color;
+  }
+
+  .range {
+    appearance: none;
+    box-sizing: border-box;
+    max-width: 379px;
+    width: 100%;
+    align-self: center;
+    cursor: pointer;
+    outline: none;
+    height: 2px;
+    background-color: $orange-color;
+    transform: translateY(-2px);
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $orange-color;
+    }
+  }
+}
