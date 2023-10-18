@@ -66,10 +66,10 @@ const Header: FC<IHeader> = ({ onOpenMenu }): ReactElement => {
           <g
             className={styles.line}
             stroke="#000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.75"
-            clip-path="url(#a)"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2.75"
+            clipPath="url(#a)"
           >
             <path d="M5.333 8h21.334M5.333 16h21.334M5.333 24h16" />
           </g>

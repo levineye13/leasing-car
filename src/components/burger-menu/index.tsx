@@ -25,9 +25,9 @@ const BurgerMenu: FC<IBurgerMenu> = ({ onClose }): ReactElement => {
           <g
             className={styles.line}
             stroke="#000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.75"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2.75"
           >
             <path d="M22.6 9.4 9.4 22.6M9.4 9.4l13.2 13.2" />
           </g>
