@@ -8,6 +8,7 @@ interface IButton {
   readonly disabled?: boolean;
   readonly onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   readonly color?: 'white' | 'orange' | 'grey';
+  readonly className?: string;
 }
 
 const Button: FC<IButton> = ({
@@ -16,10 +17,13 @@ const Button: FC<IButton> = ({
   onClick,
   disabled,
   color = 'white',
+  className,
 }): ReactElement => {
   return (
     <button
-      className={`${styles.button} ${styles[color]}`}
+      className={`${styles.button} ${styles[color] || 'white'} ${
+        className || ''
+      }`}
       type={type || 'button'}
       onClick={onClick}
       disabled={disabled}
