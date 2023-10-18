@@ -21,6 +21,7 @@ const PointsSlider: FC<IPointsSlider> = ({
             className={`${styles.item} ${
               index === activeIndex ? styles.item_active : ''
             }`}
+            key={index}
           />
         ))}
       </ul>
