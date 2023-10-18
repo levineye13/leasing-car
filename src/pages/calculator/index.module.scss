@@ -1,0 +1,116 @@
+@import '../../styles/index.scss';
+
+.section {
+  font-family: 'Nekst', 'Times New Roman', Times, serif;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  .title {
+    @include font(54px, 900, 90%);
+    margin: 0 0 32px 0;
+    color: $black-color;
+    max-width: 753px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 34px;
+      max-width: auto;
+    }
+  }
+
+  .ranges {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 32px;
+    margin-bottom: 51px;
+
+    @media screen and (max-width: 1439px) {
+      gap: 39px 0;
+      flex-direction: column;
+      margin-bottom: 44px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .div {
+    flex: 0 1 427px;
+    margin: 0 32px 0 0;
+
+    &:last-of-type {
+      @media screen and (max-width: 767px) {
+        margin-top: 29px;
+      }
+    }
+
+    @media screen and (max-width: 1439px) {
+      margin: 0;
+      flex: 0 1 50%;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-basis: 100%;
+    }
+  }
+
+  .caption {
+    font-family: $font-family;
+    @include font(16px, 400, 150%);
+    color: $grey-color;
+    margin: 0 0 8px 0;
+
+    @media screen and (max-width: 1439px) {
+      color: #333;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 136%;
+    }
+  }
+
+  .sum {
+    @include font(54px, 900, 90%);
+    width: 100%;
+    color: $grey-color;
+    margin: 0;
+
+    &::after {
+      content: '\20BD';
+      margin-left: 15px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      color: #333;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 90%;
+    }
+  }
+
+  .button {
+    font-family: 'Nekst', 'Times New Roman', Times, serif;
+    @include font(30px, 900, 120%);
+    max-width: 426px;
+    width: 100%;
+
+    @media screen and (max-width: 1439px) {
+      max-width: 345px;
+      margin-top: 44px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 90%;
+      max-width: 280px;
+      padding: 18px 51px 22px;
+      margin: 32px auto 0;
+    }
+  }
+}
