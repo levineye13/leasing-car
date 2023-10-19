@@ -3,7 +3,6 @@ import React, { FC, ReactElement, useState, useMemo } from 'react';
 import Range from '../../components/range';
 import Button from '../../components/button';
 import { TRange } from '../../utils/types';
-import { images } from '../../images';
 import styles from './index.module.scss';
 
 type TState = {
@@ -14,7 +13,11 @@ type TState = {
   };
 };
 
-const Calculator: FC = (): ReactElement => {
+interface ICalculator {
+  readonly className?: string;
+}
+
+const Calculator: FC<ICalculator> = ({ className }): ReactElement => {
   const [input, setInput] = useState<TState>({
     sum: { value: 1000000, min: 1000000, max: 6000000 },
     percent: { value: 10, min: 10, max: 60 },
@@ -71,7 +74,7 @@ const Calculator: FC = (): ReactElement => {
   };
 
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${className || ''}`}>
       <p className={styles.title}>Рассчитайте стоимость автомобиля в лизинг</p>
       <div className={styles.ranges}>
         <Range

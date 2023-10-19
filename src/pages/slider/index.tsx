@@ -11,7 +11,11 @@ const data = new Array(6).fill({}).map((item, index) => ({
   text: 'Получите машину за 5 дней',
 }));
 
-const SliderPage: FC = (): ReactElement => {
+interface ISliderPage {
+  readonly className?: string;
+}
+
+const SliderPage: FC<ISliderPage> = ({ className }): ReactElement => {
   const [description, setDescription] = useState({
     index: 0,
     title: data[0].title,
@@ -58,7 +62,7 @@ const SliderPage: FC = (): ReactElement => {
   };
 
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${className || ''}`}>
       <Description
         title={data[description.index].title}
         text={description.text}

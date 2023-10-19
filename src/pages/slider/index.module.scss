@@ -49,6 +49,10 @@
     position: absolute;
     bottom: 44px;
     right: 44px;
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
   }
 
   .progress {

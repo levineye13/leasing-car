@@ -1,12 +1,15 @@
 @import '../../styles/index.scss';
 
 .header {
+  box-sizing: border-box;
   font-family: $font-family;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: $light-color;
+  max-width: 1344px;
+  width: 100%;
 
   .logo {
     display: block;
@@ -86,6 +89,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1;
   }
 
   .item {
