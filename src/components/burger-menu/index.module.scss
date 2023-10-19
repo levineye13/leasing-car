@@ -10,6 +10,8 @@
   background-color: $light-color;
   margin-left: auto;
   cursor: default;
+  position: relative;
+  z-index: 20;
 
   @media screen and (max-width: 767px) {
     max-width: 260px;

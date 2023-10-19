@@ -1,9 +1,9 @@
 import React, { FC, ReactElement } from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from '../logo';
 import Button from '../button';
 import styles from './index.module.scss';
-import { Link } from 'react-router-dom';
 
 interface IHeader {
   readonly onOpenMenu: () => void;
