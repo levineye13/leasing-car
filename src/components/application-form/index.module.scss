@@ -1,0 +1,61 @@
+@import '../../styles/index.scss';
+
+.fieldset {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .div {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 29px 33px;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #f3f3f4;
+    border-radius: 16px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+      border: 0;
+      margin-top: 6px;
+      padding: 0;
+    }
+
+    .par {
+      @include font(14px, 400, 150%);
+      color: rgba($color: $black-color, $alpha: 0.5);
+      max-width: 351px;
+      margin: 0;
+
+      @media screen and (max-width: 767px) {
+        max-width: 280px;
+        text-align: center;
+        margin-top: 16px;
+      }
+    }
+
+    .link {
+      color: $black-color;
+      text-decoration: none;
+    }
+  }
+
+  .input {
+    @media screen and (max-width: 767px) {
+      margin-top: 8px;
+    }
+  }
+}
