@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 interface IDescriptionSlider {
   readonly title: string;
   readonly text: string;
+  readonly onOpenApplicationPage: () => void;
   readonly withTitle?: boolean;
   readonly className?: string;
 }
@@ -13,6 +14,7 @@ interface IDescriptionSlider {
 const DescriptionSlider: FC<IDescriptionSlider> = ({
   title,
   text,
+  onOpenApplicationPage,
   withTitle,
   className,
 }): ReactElement => {
@@ -24,7 +26,7 @@ const DescriptionSlider: FC<IDescriptionSlider> = ({
         <p className={styles.title}>{title}</p>
       )}
       <p className={styles.text}>{text}</p>
-      <Button type="button" color="orange">
+      <Button type="button" color="orange" onClick={onOpenApplicationPage}>
         Оставить заявку
       </Button>
     </div>

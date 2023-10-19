@@ -33,8 +33,14 @@ const App: FC = (): ReactElement => {
         onOpenApplicationPage={handleOpenApplicationPage}
       />
       <main className={styles.main}>
-        <SliderPage className={styles.slider} />
-        <CalculatorPage className={styles.calculator} />
+        <SliderPage
+          className={styles.slider}
+          onOpenApplicationPage={handleOpenApplicationPage}
+        />
+        <CalculatorPage
+          className={styles.calculator}
+          onOpenApplicationPage={handleOpenApplicationPage}
+        />
       </main>
       <Background isOpen={menuIsOpen} onClose={handleClose}>
         <Menu onClose={handleClose} />

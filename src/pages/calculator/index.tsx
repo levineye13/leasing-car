@@ -14,10 +14,14 @@ type TState = {
 };
 
 interface ICalculator {
+  readonly onOpenApplicationPage: () => void;
   readonly className?: string;
 }
 
-const Calculator: FC<ICalculator> = ({ className }): ReactElement => {
+const Calculator: FC<ICalculator> = ({
+  onOpenApplicationPage,
+  className,
+}): ReactElement => {
   const [input, setInput] = useState<TState>({
     sum: { value: 1000000, min: 1000000, max: 6000000 },
     percent: { value: 10, min: 10, max: 60 },
@@ -118,7 +122,12 @@ const Calculator: FC<ICalculator> = ({ className }): ReactElement => {
         <p className={styles.caption}>Ежемесячный платеж от</p>
         <p className={styles.sum}>{count.monthlyPayment}</p>
       </div>
-      <Button type="button" color="orange" className={styles.button}>
+      <Button
+        type="button"
+        color="orange"
+        className={styles.button}
+        onClick={onOpenApplicationPage}
+      >
         Оставить заявку
       </Button>
     </section>

@@ -6,7 +6,11 @@ import Input from '../../components/input';
 import Button from '../../components/button';
 import styles from './index.module.scss';
 
-const ApplicationForm: FC = (): ReactElement => {
+interface IApplicationForm {
+  readonly onSubmit: () => void;
+}
+
+const ApplicationForm: FC<IApplicationForm> = ({ onSubmit }): ReactElement => {
   const [errors, setErrors] = useState({
     tel: '',
     name: '',
@@ -40,7 +44,7 @@ const ApplicationForm: FC = (): ReactElement => {
   };
 
   return (
-    <Form name="applicationForm">
+    <Form name="applicationForm" onSubmit={onSubmit}>
       <fieldset className={styles.fieldset}>
         <Input
           type="text"
@@ -74,7 +78,7 @@ const ApplicationForm: FC = (): ReactElement => {
               на обработку персональных данных
             </a>
           </p>
-          <Button type="button" color="orange">
+          <Button type="submit" color="orange">
             Оставить заявку
           </Button>
         </div>

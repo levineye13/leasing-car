@@ -29,7 +29,7 @@ const OnlineApplication: FC<IOnlineApplication> = ({
           Заполните форму, и мы вскоре свяжемся с вами, чтобы ответить на все
           вопросы
         </p>
-        <ApplicationForm />
+        <ApplicationForm onSubmit={onClose} />
         <address className={styles.socials}>
           <a
             className={styles.link}

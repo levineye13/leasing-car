@@ -12,10 +12,14 @@ const data = new Array(6).fill({}).map((item, index) => ({
 }));
 
 interface ISliderPage {
+  readonly onOpenApplicationPage: () => void;
   readonly className?: string;
 }
 
-const SliderPage: FC<ISliderPage> = ({ className }): ReactElement => {
+const SliderPage: FC<ISliderPage> = ({
+  onOpenApplicationPage,
+  className,
+}): ReactElement => {
   const [description, setDescription] = useState({
     index: 0,
     title: data[0].title,
@@ -66,6 +70,7 @@ const SliderPage: FC<ISliderPage> = ({ className }): ReactElement => {
       <Description
         title={data[description.index].title}
         text={description.text}
+        onOpenApplicationPage={onOpenApplicationPage}
         withTitle={description.index === 0}
         className={styles.description}
       />
