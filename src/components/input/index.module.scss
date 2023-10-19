@@ -5,8 +5,6 @@
   font-family: $font-family;
   max-width: 311px;
   width: 100%;
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
   position: relative;
 
   &:hover,
@@ -38,15 +36,17 @@
     display: block;
     font-family: inherit;
     border: 0;
-    background-color: inherit;
     outline: 0;
-    padding: 12px 24px;
+    padding: 24px 24px 8px;
     width: 100%;
     max-height: 50px;
     height: 50px;
     border: 1px solid transparent;
     background-color: #f3f3f4;
     border-radius: 16px;
+    color: transparent;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &::placeholder {
       opacity: 0;
@@ -62,13 +62,11 @@
       border-color: $orange-color;
       background-color: $light-color;
       box-shadow: 0 0 1px 3px rgba($color: $orange-color, $alpha: 0.2);
+      color: $grey-color;
     }
 
     &:hover,
     &:focus {
-      padding-top: 24px;
-      padding-bottom: 8px;
-
       &::placeholder {
         opacity: 1;
       }
