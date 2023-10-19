@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/leasing-car/static/css/main.5fb83340.css",
+    "main.js": "/leasing-car/static/js/main.64aafd89.js",
+    "static/media/Nekst-Black.otf": "/leasing-car/static/media/Nekst-Black.7f094525c4903345ff54.otf",
+    "static/media/car.png": "/leasing-car/static/media/car.b3bd5bfd85f2aebee941.png",
+    "static/media/Gilroy-Bold.woff": "/leasing-car/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
+    "static/media/Gilroy-Regular.woff": "/leasing-car/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
+    "static/media/Gilroy-Bold.woff2": "/leasing-car/static/media/Gilroy-Bold.ef7c40ff1efeaaa4c7c6.woff2",
+    "static/media/Gilroy-Regular.woff2": "/leasing-car/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
+    "static/media/whatsapp.svg": "/leasing-car/static/media/whatsapp.25da91acaad0a85f8bf9f1e4331b46da.svg",
+    "index.html": "/leasing-car/index.html",
+    "static/media/telegram.svg": "/leasing-car/static/media/telegram.552265d1680ddb8b244308b32e4d09fc.svg",
+    "static/media/sum.svg": "/leasing-car/static/media/sum.933adc256b9d30488a21c7076e7e1cf6.svg",
+    "main.5fb83340.css.map": "/leasing-car/static/css/main.5fb83340.css.map",
+    "main.64aafd89.js.map": "/leasing-car/static/js/main.64aafd89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fb83340.css",
+    "static/js/main.64aafd89.js"
+  ]
+}
