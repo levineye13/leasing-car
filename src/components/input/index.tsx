@@ -6,13 +6,14 @@ interface IInput {
   readonly type: HTMLInputElement['type'];
   readonly title: string;
   readonly name: string;
-  readonly value: string | number;
-  readonly onChange: () => void;
+  readonly value?: string | number;
+  readonly onChange?: () => void;
   readonly error?: string;
   readonly required?: boolean;
   readonly placeholder?: string;
   readonly disabled?: boolean;
   readonly className?: string;
+  readonly inputRef: React.MutableRefObject<HTMLInputElement | null>;
 }
 
 const Input: FC<IInput> = ({
@@ -25,6 +26,8 @@ const Input: FC<IInput> = ({
   placeholder,
   disabled,
   className,
+  onChange,
+  inputRef,
 }): ReactElement => {
   return (
     <label
@@ -36,11 +39,13 @@ const Input: FC<IInput> = ({
       <input
         className={`${styles.input} ${error ? styles.input_error : ''}`}
         name={name}
-        value={value}
+        //value={value}
         type={type}
         required={required}
+        onChange={onChange}
         disabled={disabled}
         placeholder={placeholder}
+        ref={inputRef}
       />
       {error && <span className={styles.error}>{error}</span>}
     </label>

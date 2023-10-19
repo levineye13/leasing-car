@@ -1,4 +1,5 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactElement, useRef, useState } from 'react';
+import { useMask } from '@react-input/mask';
 
 import Form from '../../components/form';
 import Input from '../../components/input';
@@ -6,27 +7,60 @@ import Button from '../../components/button';
 import styles from './index.module.scss';
 
 const ApplicationForm: FC = (): ReactElement => {
+  const [errors, setErrors] = useState({
+    tel: '',
+    name: '',
+  });
+
+  const inputName = useRef<HTMLInputElement>(null);
+  const inputTel = useMask({
+    mask: '+7 (ddd) ddd dd dd',
+    replacement: {
+      d: /\d/,
+    },
+    onMask: (e) => {
+      if (!e.detail.isValid) {
+        if (e.detail.input.length === 0) {
+          setErrors({ ...errors, tel: 'Введите номер' });
+        } else {
+          setErrors({ ...errors, tel: 'Некорректный номер' });
+        }
+      } else {
+        setErrors({ ...errors, tel: '' });
+      }
+    },
+  });
+
+  const handleChange = () => {
+    if (inputName.current && !inputName.current.validity.valid) {
+      setErrors({ ...errors, name: inputName.current.validationMessage });
+    } else {
+      setErrors({ ...errors, name: '' });
+    }
+  };
+
   return (
     <Form name="applicationForm">
       <fieldset className={styles.fieldset}>
         <Input
-          type="tel"
+          type="text"
           title="Телефон"
-          name="text"
-          value={''}
-          error={''}
-          onChange={() => {}}
+          name="tel"
+          error={errors.tel}
           placeholder="+7 (921) 123 45 67"
+          inputRef={inputTel}
         />
         <Input
           type="text"
           title="Имя"
-          name="text"
-          value={''}
-          error={''}
-          onChange={() => {}}
+          name="name"
+          error={errors.name}
+          value={inputName.current?.value || ''}
+          onChange={handleChange}
+          required
           placeholder="Введите имя"
           className={styles.input}
+          inputRef={inputName}
         />
         <div className={styles.div}>
           <p className={styles.par}>
