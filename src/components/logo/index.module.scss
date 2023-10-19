@@ -1,0 +1,9 @@
+.logo {
+  .car {
+    fill: #111111;
+
+    @media screen and (max-width: 767px) {
+      fill: #ffffff;
+    }
+  }
+}
