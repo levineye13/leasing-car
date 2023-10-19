@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/leasing-car/static/css/main.5fb83340.css",
-    "main.js": "/leasing-car/static/js/main.64aafd89.js",
+    "main.js": "/leasing-car/static/js/main.bc919b76.js",
     "static/media/Nekst-Black.otf": "/leasing-car/static/media/Nekst-Black.7f094525c4903345ff54.otf",
     "static/media/car.png": "/leasing-car/static/media/car.b3bd5bfd85f2aebee941.png",
     "static/media/Gilroy-Bold.woff": "/leasing-car/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
@@ -13,10 +13,10 @@
     "static/media/telegram.svg": "/leasing-car/static/media/telegram.552265d1680ddb8b244308b32e4d09fc.svg",
     "static/media/sum.svg": "/leasing-car/static/media/sum.933adc256b9d30488a21c7076e7e1cf6.svg",
     "main.5fb83340.css.map": "/leasing-car/static/css/main.5fb83340.css.map",
-    "main.64aafd89.js.map": "/leasing-car/static/js/main.64aafd89.js.map"
+    "main.bc919b76.js.map": "/leasing-car/static/js/main.bc919b76.js.map"
   },
   "entrypoints": [
     "static/css/main.5fb83340.css",
-    "static/js/main.64aafd89.js"
+    "static/js/main.bc919b76.js"
   ]
 }
